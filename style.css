@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  padding: 0;
+  margin: 0;
+}
+
+.color-list {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.hanzi {
+  writing-mode: vertical-lr;
+  font-size: 3em;
+  margin: 0;
+}
+
+.color {
+  flex: 0 0 18%;
+  /*flex-grow | flex-shrink | flex-basis*/
+  box-shadow: 0 0 30px #424242;
+  padding: 1em;
+  color: white;
+  transition: flex-basis 0.5s ease-in-out;
+/*   height: 100vh; */
+  overflow: hidden;
+}
+.color:hover {
+  flex-basis: 40%;
+}
+.color:hover .details {
+  opacity: 1;
+}
+
+.name {
+  font-size: 1.2em;
+}
+
+.details {
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.details li {
+  line-height: 2em;
+}
+
+#hpyc {
+  background-color: #FBAF64;
+  background-image: url(https://cdn.glitch.com/dc0962ae-568e-4c08-9942-ffc44f329775%2Ftrimhpyc.png?v=1566271757918);
+  background-repeat: no-repeat;
+  background-position: bottom 0px left 100px;
+}
+
+#epq {
+  background-color: #84EAE1;
+  background-image: url(https://cdn.glitch.com/dc0962ae-568e-4c08-9942-ffc44f329775%2Ftrimepq.png?v=1566271758039);
+  background-repeat: no-repeat;
+  background-position: bottom 0px left 100px;
+  overflow: hidden;
+}
+
+#yuan {
+  background-color: #99CF4D;
+  background-image: url(https://cdn.glitch.com/dc0962ae-568e-4c08-9942-ffc44f329775%2Fyuanyuan.svg?v=1566272326858);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom -110px left 100px;
+  background-size: 280px;
+}
+
+#dini {
+  background-color: #F39FC2;
+  background-image: url(https://cdn.glitch.com/dc0962ae-568e-4c08-9942-ffc44f329775%2Fdinihead.svg?v=1566272348736);
+  background-repeat: no-repeat;
+  background-position: bottom -5px left 100px;
+  background-size: 280px;
+}
+
+#frog {
+  background-color: #FF1E31;
+  flex: 1 0 28%;
+}
+
+h1 {
+  font-size: 6em;
+  writing-mode: vertical-lr;
+  text-shadow: -5px -5px 0px #a41f70;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.subhead {
+  display: inline-block;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+.color {
+  flex: 0 0 10%;
+  }
+.color:hover {
+  flex-basis: 60%;
+}
+  h1 {
+    font-size: 3em;
+  }
+#frog {
+    
+  flex-wrap: wrap;
+  }
+}
